@@ -29,6 +29,6 @@ public class Coll : MonoBehaviour {
 			}
 	
 
-			planet.transform.localScale = new Vector2 (a, a);
+			planet.transform.localScale = new Vector2 (a/10, a/10);
 		}
 	}
