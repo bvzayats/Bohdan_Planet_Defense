@@ -25,11 +25,11 @@ public class die : MonoBehaviour {
 
 		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
 
-		asd = world.x * -2;
+		asd = (world.x * -2);
 
 		print(asd);
 
-		if (this.gameObject.transform.lossyScale.x >= asd-2) {
+		if (this.gameObject.transform.lossyScale.x >= asd - 0.2) {
 
 			birds.GetComponent<SpriteRenderer>().enabled=false;
 			birds1.GetComponent<SpriteRenderer>().enabled=false;

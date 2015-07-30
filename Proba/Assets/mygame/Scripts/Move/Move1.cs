@@ -30,6 +30,11 @@ public class Move1 : MonoBehaviour {
 
 				thisTransform.position = Vector3.Lerp (startPos, endPos, i * speed);}
 
+			if(this.gameObject.transform.position.x == 0 && this.gameObject.transform.position.y == 0)
+			{
+				Destroy (this.gameObject);
+			}
+
 				yield return null; 	
 			
 		}
