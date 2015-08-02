@@ -6,6 +6,7 @@ public class ManagerScore : MonoBehaviour
 {
 	public static int score;        // The player's score.
 	public static int hightscore;
+
 	
 	
 	Text text;                      // Reference to the Text component.
@@ -23,7 +24,10 @@ public class ManagerScore : MonoBehaviour
 	
 	void Update ()
 	{
+		if (score > PlayerPrefs.GetInt("Score")) {
+			PlayerPrefs.SetInt ("Score", score);
+		}
 		// Set the displayed text to be the word "Score" followed by the score value.
-		text.text = "Score: " + score + "/" + hightscore;
+		text.text = "Score: " + score + "/" + PlayerPrefs.GetInt("Score");
 	}
 }

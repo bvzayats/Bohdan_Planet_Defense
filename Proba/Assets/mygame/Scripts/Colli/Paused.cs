@@ -9,17 +9,19 @@ public class Paused : MonoBehaviour {
 		paused = false;
 
 	}
-	
-	public void PauseButtonClicked()
-	{
+	public void PauseButtonClick(){
 		paused = !paused;
 		if (paused) {
-
 			Time.timeScale = 1;
-			
-		} 
+		}
+	}
+
+	public void ResumeButtonClick(){
+
+		paused = false;
 	}
 
 
-
 }
+	
+

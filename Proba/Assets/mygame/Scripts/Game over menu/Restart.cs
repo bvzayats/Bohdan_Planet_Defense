@@ -11,7 +11,8 @@ public class Restart : MonoBehaviour {
 	
 	public void RestartButtonClicked()
 	{
-		Application.LoadLevel (Application.loadedLevel);
+		Application.LoadLevel (2);
+		Paused.paused = false;
 		
 	}
 	// Update is called once per frame

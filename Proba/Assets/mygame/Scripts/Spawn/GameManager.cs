@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 	public Transform[] spawnPoints; // точки спауну
 	public GameObject[] enemyPrefabs; // масив обєктів які спамитумуться
 	private GameObject[] spawn_obj; //масив де зберігаються всі заспамлені обєкти
-	public int amountEnemies; // загальна кіклькість астероїдів які заспамляться 
+	public int amountEnemies=1; // загальна кіклькість астероїдів які заспамляться 
 	public int count_point_spawn;
 	private int a = 0;
 	private float x=0,y=0;
@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
 			y=6*Mathf.Sin(cor);
 			spawnPoints[j].position= new Vector3(x,y,1);
 		
-			print(spawnPoints[j].position);
-			print(cor);
 			cor+=pint;
 		}
 	}
@@ -44,7 +42,18 @@ public class GameManager : MonoBehaviour
 	
 	IEnumerator spawn()
 	{
-
+		if (ManagerTime.time_min == 1) {
+			amountEnemies=3;
+		}
+		if (ManagerTime.time_min == 2) {
+			amountEnemies=5;
+		}
+		if (ManagerTime.time_min == 3) {
+			amountEnemies=7;
+		}
+		if (ManagerTime.time_min == 5) {
+			amountEnemies=10;
+		}
 		for (int i = 0; i < amountEnemies; i++)
 		{
 

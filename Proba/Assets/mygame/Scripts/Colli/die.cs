@@ -12,9 +12,8 @@ public class die : MonoBehaviour {
 	public Camera main;
 	public Vector3 world;
 	public float asd;
-
-
-
+	public static float end_screen;
+	
 	void Start(){
 		birds.GetComponent<SpriteRenderer>().enabled=true;
 		birds1.GetComponent<SpriteRenderer>().enabled=true;
@@ -22,39 +21,34 @@ public class die : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Update () {
-
+		
 		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
-
+		
 		asd = (world.x * -2);
-
+		
+		end_screen = asd / 4.862014f;
+		
 		print(asd);
-
-		if (this.gameObject.transform.lossyScale.x >= asd - 0.2) {
-
+		
+		if (this.gameObject.transform.lossyScale.x >= end_screen - end_screen / 20 ) {
+			
 			birds.GetComponent<SpriteRenderer>().enabled=false;
 			birds1.GetComponent<SpriteRenderer>().enabled=false;
 			birds2.GetComponent<SpriteRenderer> ().enabled = false;
 		}
-
-
-
-		if (this.gameObject.transform.lossyScale.x >= asd) {
 		
+		if (this.gameObject.transform.lossyScale.x >= end_screen) {
+			
 			bird.SetActive(false);
-
-
-
+			
 			planet.SetActive(false);
 			ui.SetActive(true);
 			Game_over.SetActive(true);
-
-
-
-
+			
 		}
 	}
-
 }
+
 
 
 		
