@@ -11,7 +11,7 @@ public class Restart : MonoBehaviour {
 	
 	public void RestartButtonClicked()
 	{
-		Application.LoadLevel (2);
+		Application.LoadLevel (Application.loadedLevel);
 		Paused.paused = false;
 		
 	}
