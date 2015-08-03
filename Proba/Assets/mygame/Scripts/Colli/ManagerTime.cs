@@ -6,8 +6,9 @@ public class ManagerTime : MonoBehaviour
 {
 	public static float time_sec;       // The player's time.
 	public static float time_min;
+	public static string time_game;
 	
-	Text text;                      // Reference to the Text component.
+	 Text text;                      // Reference to the Text component.
 	
 	
 	void Awake ()
@@ -25,7 +26,8 @@ public class ManagerTime : MonoBehaviour
 	{
 		// Set the displayed text to be the word "Time" followed by the score value.
 		if (time_sec < 10&&time_min < 10) {
-			text.text = "0"+time_min + ":0" + (int)time_sec;
+			time_game=text.text = "0"+time_min + ":0" + (int)time_sec;
+
 		}
 		if (time_sec > 10&&time_min < 10) {
 			text.text = "0"+time_min + ":" + (int)time_sec;

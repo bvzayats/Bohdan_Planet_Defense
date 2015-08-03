@@ -93,6 +93,7 @@
      <Compile Include="Assets\mygame\Scripts\Colli\Paused.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\Sizes.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\die.cs" />
+     <Compile Include="Assets\mygame\Scripts\Colli\table.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\timer.cs" />
      <Compile Include="Assets\mygame\Scripts\Game over menu\MainMenu.cs" />
      <Compile Include="Assets\mygame\Scripts\Game over menu\Menu.cs" />
