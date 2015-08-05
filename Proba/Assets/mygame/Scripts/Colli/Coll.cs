@@ -2,9 +2,7 @@
 using System.Collections; 
 public class Coll : MonoBehaviour { 
 
-	public Rigidbody2D b;
-	public Rigidbody2D d;
-	public Rigidbody2D c;
+	public Rigidbody2D[] ast;
 	public GameObject planet;
 	private float a ;
 	public Camera main;
@@ -26,15 +24,18 @@ public class Coll : MonoBehaviour {
 		
 		Destroy (other.gameObject);
 		
-		if (other.name == "Bird(Clone)") {
-			a += b.mass / 35;
+		if (other.name == "ast1(Clone)"||other.name == "ast7(Clone)"||other.name == "ast8(Clone)"||other.name == "ast10(Clone)"
+		    ||other.name == "ast11(Clone)"||other.name == "ast12(Clone)") {
+			a += ast[0].mass / 35;
 		}
 		
-		if( other.name =="Bird1(Clone)"){
-			a += d.mass/35;
+		if(other.name == "ast2(Clone)"||other.name == "ast3(Clone)"||other.name == "ast9(Clone)"||other.name == "ast15(Clone)"
+		   ||other.name == "ast16(Clone)"||other.name == "ast19(Clone)"||other.name == "ast20(Clone)"){
+			a += ast[1].mass/35;
 		}
-		if( other.name =="Bird2(Clone)"){
-			a += c.mass/35;
+		if(other.name == "ast4(Clone)"||other.name == "ast5(Clone)"||other.name == "ast6(Clone)"||other.name == "ast13(Clone)"
+		   ||other.name == "ast14(Clone)"||other.name == "ast17(Clone)"||other.name == "ast18(Clone)"){
+			a += ast[3].mass/35;
 		}
 		
 		

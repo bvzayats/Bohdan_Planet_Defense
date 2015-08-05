@@ -6,18 +6,16 @@ public class die : MonoBehaviour {
 	public GameObject Game_over;
 	public GameObject bird;
 	public GameObject planet;
-	public GameObject birds;
-	public GameObject birds1;
-	public GameObject birds2;
+	public GameObject[] ast;
 	public Camera main;
 	public Vector3 world;
 	public float asd;
 	public static float end_screen;
 	
 	void Start(){
-		birds.GetComponent<SpriteRenderer>().enabled=true;
-		birds1.GetComponent<SpriteRenderer>().enabled=true;
-		birds2.GetComponent<SpriteRenderer> ().enabled = true;
+		for(int i=0;i<ast.Length;i++ )
+		ast[i].GetComponent<SpriteRenderer>().enabled=true;
+
 	}
 	// Use this for initialization
 	void Update () {
@@ -28,13 +26,12 @@ public class die : MonoBehaviour {
 		
 		end_screen = asd / 4.862014f;
 		
-		print(asd);
+	
 		
 		if (this.gameObject.transform.lossyScale.x >= end_screen - end_screen / 20 ) {
-			
-			birds.GetComponent<SpriteRenderer>().enabled=false;
-			birds1.GetComponent<SpriteRenderer>().enabled=false;
-			birds2.GetComponent<SpriteRenderer> ().enabled = false;
+			for(int i=0;i<ast.Length;i++ )
+			ast[i].GetComponent<SpriteRenderer>().enabled=false;
+		
 		}
 		
 		if (this.gameObject.transform.lossyScale.x >= end_screen) {
@@ -42,6 +39,20 @@ public class die : MonoBehaviour {
 			bird.SetActive(false);
 			
 			planet.SetActive(false);
+			if (ManagerScore.score > PlayerPrefs.GetInt ("Score1")) {
+				PlayerPrefs.SetInt ("Score1", ManagerScore.score);
+				PlayerPrefs.SetString ("Timer1", ManagerTime.time_game);
+				
+			}
+			if (ManagerScore.score < PlayerPrefs.GetInt ("Score1") && ManagerScore.score > PlayerPrefs.GetInt ("Score2")) {
+				PlayerPrefs.SetInt ("Score2",ManagerScore.score);
+				PlayerPrefs.SetString ("Timer2", ManagerTime.time_game);
+				
+			}
+			if (ManagerScore.score < PlayerPrefs.GetInt ("Score2") && ManagerScore.score > PlayerPrefs.GetInt ("Score3")) {
+				PlayerPrefs.SetInt ("Score3", ManagerScore.score);
+				PlayerPrefs.SetString ("Timer3", ManagerTime.time_game);
+			}
 			ui.SetActive(true);
 			Game_over.SetActive(true);
 			

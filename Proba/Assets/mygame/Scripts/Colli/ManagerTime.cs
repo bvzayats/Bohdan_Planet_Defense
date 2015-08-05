@@ -30,14 +30,14 @@ public class ManagerTime : MonoBehaviour
 
 		}
 		if (time_sec > 10&&time_min < 10) {
-			text.text = "0"+time_min + ":" + (int)time_sec;
+			time_game=text.text = "0"+time_min + ":" + (int)time_sec;
 		}
 	
 		if (time_sec > 10&&time_sec < 10) {
-			text.text = time_min + ":0" + (int)time_sec;
+			time_game=text.text = time_min + ":0" + (int)time_sec;
 		}
 		if (time_sec > 10&&time_sec > 10) {
-			text.text = time_min + ":" + (int)time_sec;
+			time_game=text.text = time_min + ":" + (int)time_sec;
 		}
 	}
 }
