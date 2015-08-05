@@ -1,14 +1,14 @@
 ﻿using UnityEngine; 
 using System.Collections; 
-public class Coll : MonoBehaviour { 
-
+public class ColliStay : MonoBehaviour { 
+	
 	public Rigidbody2D[] ast;
 	public GameObject planet;
 	private float a ;
 	public Camera main;
 	public static Vector3 world;
 	public static float asd;
-
+	
 	void Start () {
 		
 		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
@@ -19,10 +19,7 @@ public class Coll : MonoBehaviour {
 		a = asd;
 		
 	}
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		
+	void OnTriggerStay(Collider other) {
 		Destroy (other.gameObject);
 		
 		if (other.name == "ast1(Clone)"||other.name == "ast7(Clone)"||other.name == "ast8(Clone)"||other.name == "ast10(Clone)"
@@ -42,4 +39,4 @@ public class Coll : MonoBehaviour {
 		
 		planet.transform.localScale = new Vector2 (a, a);
 	}
-	}
+}
