@@ -19,10 +19,18 @@ public class Coll : MonoBehaviour {
 		a = asd;
 		
 	}
+	void OnTriggerStay2D(Collider2D other) {
+		Debug.Log ("stay");
+		Destroy (other.gameObject);
+	}
+	void OnTriggerExit2D(Collider2D other) {
+		Debug.Log ("exit");
+		Destroy (other.gameObject);
+	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		
+		Debug.Log ("enter");
 		Destroy (other.gameObject);
 		
 		if (other.name == "ast1(Clone)"||other.name == "ast7(Clone)"||other.name == "ast8(Clone)"||other.name == "ast10(Clone)"

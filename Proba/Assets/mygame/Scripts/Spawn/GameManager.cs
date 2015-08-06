@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 	public Transform[] spawnPoints; // точки спауну
 	public GameObject[] enemyPrefabs; // масив обєктів які спамитумуться
 	private GameObject[] spawn_obj; //масив де зберігаються всі заспамлені обєкти
+
 	public int amountEnemies=1; // загальна кіклькість астероїдів які заспамляться 
 	public int count_point_spawn;
 	private int a = 0;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 	public int yieldTimeMin; // мінімальний час появлення астероїдів(спавну)
 	public int yieldTimeMax; // максимальний час появлення астероїдів(спавну)
 	private int i;
+
 	
 	 void point_spaawn(){
 	 float pint = (360)/count_point_spawn;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
 
 	void Start(){
 		point_spaawn();
+	    
 	}
 	void Update() 
 	{

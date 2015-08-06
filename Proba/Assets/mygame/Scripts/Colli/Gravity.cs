@@ -15,11 +15,12 @@ public class Gravity : MonoBehaviour {
 		//Again, you can change the tag to whatever you want. 
 		//planet = GameObject.FindGameObjectWithTag("planeta");
 	}
-	
+
+
 	//Use FixedUpdate because we are controlling the orbit with physics
 	void FixedUpdate () {
-		//Declare Variables:
-		
+
+
 		//magsqr will be the offset squared between the object and the planet
 		float magsqr;
 		
@@ -31,16 +32,27 @@ public class Gravity : MonoBehaviour {
 		
 		//My game is 2D, so I set the offset on the Z axis to 0 
 		offset.z = 0;
-		
+
 		//Offset Squared: 
 		magsqr = offset.sqrMagnitude;
-		
+
 		//Check distance is more than 0 to prevent division by 0
-		if (magsqr > 0.0001f)
-		{
+		if (magsqr > 0.0001f) {
+
 			//Create the gravity- make it realistic through division by the "magsqr" variable 
-			GetComponent<Rigidbody2D>().AddForce((StrengthOfAttraction * offset.normalized / magsqr) * GetComponent<Rigidbody2D>().mass);
+			GetComponent<Rigidbody2D> ().AddForce ((StrengthOfAttraction * offset.normalized / magsqr) * GetComponent<Rigidbody2D> ().mass);
 		}
+	
+	}
+	void Update(){
+		Time.timeScale = 1;
+		Debug.Log ("scale 1");
+		//Declare Variables:
+		
+		if (Paused.paused) {
+			Debug.Log ("scale 0");
+			Time.timeScale = 0;
+		} 
 	}
 }
 

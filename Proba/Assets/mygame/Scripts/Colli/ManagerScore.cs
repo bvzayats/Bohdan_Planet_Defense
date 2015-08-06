@@ -6,12 +6,19 @@ public class ManagerScore : MonoBehaviour
 {
 	public static int score;  
 	public GameObject gameover;// The player's score.
-	
+	public Vector3 world;
+	public float asd;
+	public Camera mainCam;
 	Text text;                      // Reference to the Text component.
 	
 
 	void Start(){
-
+		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
+		asd = (world.x * -2);
+		double sdf = asd * 5;
+		
+		this.gameObject.GetComponent<Text> ().fontSize = (int) sdf;
+		print (GetComponent<Text> ().fontSize);
 	}
 	void Awake ()
 	{
