@@ -6,6 +6,7 @@ public class Paused : MonoBehaviour {
 	public GameObject p_butt;
 
 
+
 	// Use this for initialization
 	void Start () {
 		paused = false;
@@ -19,7 +20,9 @@ public class Paused : MonoBehaviour {
 
 	public void ResumeButtonClick(){
 		p_butt.SetActive (true);
+
 		paused = false;
+	
 	}
 
 
