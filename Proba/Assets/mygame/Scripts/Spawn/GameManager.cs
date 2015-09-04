@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 	public Transform[] spawnPoints; // точки спауну
 	public GameObject[] enemyPrefabs; // масив обєктів які спамитумуться
 	private GameObject[] spawn_obj; //масив де зберігаються всі заспамлені обєкти
-
+	private int pro = 0;
 
 	public int amountEnemies=1; // загальна кіклькість астероїдів які заспамляться 
 	public int count_point_spawn;
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 	public int yieldTimeMin; // мінімальний час появлення астероїдів(спавну)
 	public int yieldTimeMax; // максимальний час появлення астероїдів(спавну)
 	private int i;
-	private int[] sp={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+	private int[] sp={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,30};
 
 	
 	 void point_spaawn(){
@@ -49,38 +49,51 @@ public class GameManager : MonoBehaviour
 	IEnumerator spawn()
 	{
 		if (ManagerTime.time_min == 0 && ManagerTime.time_sec == 20) {
-			amountEnemies = sp [Random.Range (0, 1)];
+			amountEnemies = sp [Random.Range (0, 4)];
 		}
 			if (ManagerTime.time_min == 0 &&ManagerTime.time_sec==50) {
-				amountEnemies=sp[Random.Range(0, 3)];
+				amountEnemies=sp[Random.Range(2, 5)];
+		}
+		if (ManagerTime.time_min == 1 && ManagerTime.time_sec == 0) {
+			amountEnemies = sp [Random.Range (4, 10)];
 		}
 			if (ManagerTime.time_min == 1&&ManagerTime.time_sec==30) {
-				amountEnemies=sp[Random.Range(1, 4)];
+				amountEnemies=sp[Random.Range(5, 6)];
 		}
 		if (ManagerTime.time_min == 2) {
-				amountEnemies=sp[Random.Range(2, 4)];
+				amountEnemies=sp[Random.Range(5, 8)];
 		}
 			if (ManagerTime.time_min == 2&&ManagerTime.time_sec==30) {
-				amountEnemies=sp[Random.Range(3, 4)];
+				amountEnemies=sp[Random.Range(6, 9)];
 		}
 		if (ManagerTime.time_min == 3) {
-				amountEnemies=sp[Random.Range(4, 5)];
+				amountEnemies=sp[Random.Range(6, 10)];
 		}
 			if (ManagerTime.time_min == 3&&ManagerTime.time_sec==30) {
-				amountEnemies=sp[5];
+				amountEnemies=sp[8];
 		}
 		if (ManagerTime.time_min == 4) {
-				amountEnemies=sp[Random.Range(5, 6)];
+				amountEnemies=sp[Random.Range(7, 8)];
 			}
 		if (ManagerTime.time_min == 5) {
-				amountEnemies=sp[Random.Range(1, 7)];
+				amountEnemies=sp[Random.Range(8, 9)];
 		}
 		if (ManagerTime.time_min == 6) {
-				amountEnemies=sp[Random.Range(6, 7)];
+				amountEnemies=sp[Random.Range(9, 10)];
 		}
 		if (ManagerTime.time_min == 8) {
-				amountEnemies=sp[Random.Range(7, 10)];
+				amountEnemies=sp[Random.Range(10, 11)];
 		}
+		if (ManagerTime.time_min == 9) {
+			amountEnemies=sp[Random.Range(11,12 )];
+		}
+		if (ManagerTime.time_min == 9) {
+			amountEnemies=sp[Random.Range(18,20 )]+pro;
+		}
+		if (ManagerTime.time_sec == 20) {
+			pro++;
+		}
+
 		for (int i = 0; i < amountEnemies; i++)
 		{
 
