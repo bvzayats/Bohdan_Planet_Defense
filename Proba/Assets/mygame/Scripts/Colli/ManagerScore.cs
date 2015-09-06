@@ -51,6 +51,6 @@ public class ManagerScore : MonoBehaviour
 */
 	
 		// Set the displayed text to be the word "Score" followed by the score value.
-		text.text = "Score: " + score + "|" + PlayerPrefs.GetInt("Score1");
+		text.text = "Score: " + score;
 	}
 }

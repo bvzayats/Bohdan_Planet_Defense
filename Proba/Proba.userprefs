@@ -1,17 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Menu_Event\ShowRecords.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Menu_Event\StartOptions.cs">
     <Files>
-      <File FileName="Assets\mygame\Scripts\Colli\size_butt.cs" Line="10" Column="24" />
+      <File FileName="Assets\mygame\Scripts\Colli\ManagerScore.cs" Line="54" Column="32" />
+      <File FileName="Assets\mygame\Scripts\Colli\size_butt.cs" Line="25" Column="3" />
       <File FileName="Assets\mygame\Scripts\Spawn\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Paused.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\ManagerScore.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Gravity.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Menu_Event\Pause.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Coll.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Sizes.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\table.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Menu_Event\ShowRecords.cs" Line="34" Column="3" />
+      <File FileName="Assets\mygame\Scripts\Menu_Event\ShowRecords.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\Avake_and_Start.cs" Line="12" Column="30" />
+      <File FileName="Assets\mygame\Scripts\Menu_Event\StartOptions.cs" Line="85" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
