@@ -14,7 +14,7 @@ public class ShowPanels : MonoBehaviour {
 	public void ShowOptionsPanel()
 	{
 		optionsPanel.SetActive(true);
-		optionsTint.SetActive(true);
+		//optionsTint.SetActive(true);
 		can.SetActive (false);
 	}
 
@@ -22,7 +22,7 @@ public class ShowPanels : MonoBehaviour {
 	public void HideOptionsPanel()
 	{
 		optionsPanel.SetActive(false);
-		optionsTint.SetActive(false);
+		//optionsTint.SetActive(false);
 		can.SetActive (true);
 	}
 
