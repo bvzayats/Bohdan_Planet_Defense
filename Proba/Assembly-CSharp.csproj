@@ -95,6 +95,7 @@
      <Compile Include="Assets\mygame\Scripts\Colli\PauseMenu.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\Paused.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\Sizes.cs" />
+     <Compile Include="Assets\mygame\Scripts\Colli\StartGame.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\die.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\size_butt.cs" />
      <Compile Include="Assets\mygame\Scripts\Colli\table.cs" />

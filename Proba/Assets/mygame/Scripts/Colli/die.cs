@@ -10,6 +10,8 @@ public class die : MonoBehaviour {
 	public Camera main;
 	public Vector3 world;
 	public float asd;
+	public GameObject bt_resume;
+	public GameObject bt_pause;
 	public static float end_screen;
 	
 	void Start(){
@@ -55,6 +57,8 @@ public class die : MonoBehaviour {
 			}
 			ui.SetActive(true);
 			Game_over.SetActive(true);
+			bt_pause.SetActive(false);
+			bt_resume.SetActive(false);
 			
 		}
 	}

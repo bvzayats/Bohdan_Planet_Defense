@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
 	 float pint = (360)/count_point_spawn;
 		float cor = (360)/count_point_spawn;
 		for (int j =0; j<count_point_spawn; j++) {
-			x=6*Mathf.Cos(cor);
-			y=6*Mathf.Sin(cor);
+			x=8*Mathf.Cos(cor);
+			y=8*Mathf.Sin(cor);
 			spawnPoints[j].position= new Vector3(x,y,1);
 		
 			cor+=pint;

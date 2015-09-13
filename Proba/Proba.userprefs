@@ -1,14 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Colli\Paused.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Colli\ManagerTime.cs">
     <Files>
-      <File FileName="Proba.sln" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Menu_Event\ShowPanels.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\Gravity.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Spawn\GameManager.cs" Line="27" Column="7" />
       <File FileName="Assets\mygame\Scripts\Game over menu\MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Game over menu\Menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\die.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\Paused.cs" Line="7" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\Coll.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\ManagerScore.cs" Line="54" Column="21" />
+      <File FileName="Assets\mygame\Scripts\Colli\die.cs" Line="61" Column="31" />
+      <File FileName="Assets\mygame\Scripts\Colli\Avake_and_Start.cs" Line="21" Column="25" />
+      <File FileName="Assets\mygame\Scripts\Colli\Paused.cs" Line="22" Column="3" />
+      <File FileName="Assets\mygame\Scripts\Colli\ManagerTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\timer.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\StartGame.cs" Line="17" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
