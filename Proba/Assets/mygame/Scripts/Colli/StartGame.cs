@@ -7,14 +7,31 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-namespace AssemblyCSharp
+
+using UnityEngine;
+using System.Collections;
+
+public class StartGame : MonoBehaviour
 {
-	public class StartGame
+	public int time;
+	public GUIText timer;
+	
+	void Start()
 	{
-		public StartGame ()
+		StartCoroutine (countdown());
+	}
+	
+	IEnumerator countdown()
+	{
+		while (time > 0)
 		{
+			yield return new WaitForSeconds(1);
+			
+			timer.text = time.ToString();
+			
+			time -= 1;
 		}
+		
+		timer.text = "Blast Off!";
 	}
 }
-
