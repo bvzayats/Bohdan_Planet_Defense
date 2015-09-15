@@ -20,7 +20,7 @@ public class ManagerTime : MonoBehaviour
 
 		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
 		asd = (world.x * -2);
-		double sdf = asd * 5;
+		double sdf = asd *3;
 		
 		this.gameObject.GetComponent<Text> ().fontSize = (int) sdf;
 		print (GetComponent<Text> ().fontSize);

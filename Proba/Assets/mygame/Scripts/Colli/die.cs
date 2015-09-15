@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class die : MonoBehaviour {
@@ -13,6 +14,9 @@ public class die : MonoBehaviour {
 	public GameObject bt_resume;
 	public GameObject bt_pause;
 	public static float end_screen;
+	public GameObject text_score;
+	public GameObject scoretx;
+	public GameObject tint;
 	
 	void Start(){
 		for(int i=0;i<ast.Length;i++ )
@@ -41,6 +45,7 @@ public class die : MonoBehaviour {
 			bird.SetActive(false);
 			
 			planet.SetActive(false);
+			PlayerPrefs.SetInt ("YourScore", ManagerScore.score);
 			if (ManagerScore.score > PlayerPrefs.GetInt ("Score1")) {
 				PlayerPrefs.SetInt ("Score1", ManagerScore.score);
 				PlayerPrefs.SetString ("Timer1", ManagerTime.time_game);
@@ -55,10 +60,20 @@ public class die : MonoBehaviour {
 				PlayerPrefs.SetInt ("Score3", ManagerScore.score);
 				PlayerPrefs.SetString ("Timer3", ManagerTime.time_game);
 			}
+			world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
+			asd = (world.x * -2);
+			double sdf = asd * 4;
+
+
+			text_score.GetComponent<Text> ().fontSize = (int) sdf;
+			scoretx.GetComponent<Text> ().fontSize = (int) sdf;
+			text_score.GetComponent<Text>().text=""+PlayerPrefs.GetInt ("YourScore");
+
 			ui.SetActive(true);
 			Game_over.SetActive(true);
 			bt_pause.SetActive(false);
 			bt_resume.SetActive(false);
+			tint.SetActive(true);
 			
 		}
 	}

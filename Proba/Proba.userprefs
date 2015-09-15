@@ -1,18 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Colli\ManagerTime.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\mygame\Scripts\Colli\ManagerScore.cs">
     <Files>
+      <File FileName="Assets\mygame\Scripts\Colli\ManagerTime.cs" Line="23" Column="22" />
+      <File FileName="Assets\mygame\Scripts\Colli\ManagerScore.cs" Line="52" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Gravity.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Spawn\GameManager.cs" Line="27" Column="7" />
+      <File FileName="Assets\mygame\Scripts\Spawn\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Game over menu\MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\Coll.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\ManagerScore.cs" Line="54" Column="21" />
-      <File FileName="Assets\mygame\Scripts\Colli\die.cs" Line="61" Column="31" />
-      <File FileName="Assets\mygame\Scripts\Colli\Avake_and_Start.cs" Line="21" Column="25" />
-      <File FileName="Assets\mygame\Scripts\Colli\Paused.cs" Line="22" Column="3" />
-      <File FileName="Assets\mygame\Scripts\Colli\ManagerTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\die.cs" Line="70" Column="42" />
+      <File FileName="Assets\mygame\Scripts\Colli\Avake_and_Start.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\Paused.cs" Line="1" Column="1" />
       <File FileName="Assets\mygame\Scripts\Colli\timer.cs" Line="1" Column="1" />
-      <File FileName="Assets\mygame\Scripts\Colli\StartGame.cs" Line="17" Column="3" />
+      <File FileName="Assets\mygame\Scripts\Menu_Event\ShowRecords.cs" Line="1" Column="1" />
+      <File FileName="Assets\mygame\Scripts\Colli\table.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

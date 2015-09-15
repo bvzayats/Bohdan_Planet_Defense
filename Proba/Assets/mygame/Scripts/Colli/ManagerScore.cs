@@ -15,7 +15,7 @@ public class ManagerScore : MonoBehaviour
 	void Start(){
 		world = Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, -6.0f));
 		asd = (world.x * -2);
-		double sdf = asd * 5;
+		double sdf = asd * 4;
 		
 		this.gameObject.GetComponent<Text> ().fontSize = (int) sdf;
 		print (GetComponent<Text> ().fontSize);
@@ -34,12 +34,13 @@ public class ManagerScore : MonoBehaviour
 	void Update ()
 	{
 	
+		PlayerPrefs.SetInt ("YourScore", score);
 			if (score > PlayerPrefs.GetInt ("Score1")) {
 				PlayerPrefs.SetInt ("Score1", score);
 				PlayerPrefs.SetString ("Timer1", ManagerTime.time_game);
 		
 			}
-			/*if (score < PlayerPrefs.GetInt ("Score1") && score > PlayerPrefs.GetInt ("Score2")) {
+			if (score < PlayerPrefs.GetInt ("Score1") && score > PlayerPrefs.GetInt ("Score2")) {
 				PlayerPrefs.SetInt ("Score2", score);
 				PlayerPrefs.SetString ("Timer2", ManagerTime.time_game);
 
@@ -48,8 +49,8 @@ public class ManagerScore : MonoBehaviour
 				PlayerPrefs.SetInt ("Score3", score);
 				PlayerPrefs.SetString ("Timer3", ManagerTime.time_game);
 			}
-*/
-	
+
+
 		// Set the displayed text to be the word "Score" followed by the score value.
 		text.text = ""+ score;
 	}
