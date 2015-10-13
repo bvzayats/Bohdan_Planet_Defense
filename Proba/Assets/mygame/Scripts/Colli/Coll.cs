@@ -8,6 +8,7 @@ public class Coll : MonoBehaviour {
 	public Camera main;
 	public static Vector3 world;
 	public static float asd;
+    public static bool die = false;
 
 	void Start () {
 		
@@ -46,8 +47,11 @@ public class Coll : MonoBehaviour {
 		   ||other.name == "ast14(Clone)"||other.name == "ast17(Clone)"||other.name == "ast18(Clone)"){
 			a += ast[3].mass/35;
 		}
-		
-		
-		planet.transform.localScale = new Vector2 (a, a);
+        if (other.name == "Kometa(Clone)") {
+            foreach (GameObject ast in GameObject.FindGameObjectsWithTag("Asteroid")) { Destroy(ast); }
+            die = true;
+        }
+
+        planet.transform.localScale = new Vector2 (a, a);
 	}
 	}

@@ -14,8 +14,6 @@ public class die : MonoBehaviour {
 	public GameObject bt_resume;
 	public GameObject bt_pause;
 	public static float end_screen;
-	public GameObject text_score;
-	public GameObject scoretx;
 	public GameObject tint;
 	
 	void Start(){
@@ -40,7 +38,7 @@ public class die : MonoBehaviour {
 		
 		}
 		
-		if (this.gameObject.transform.lossyScale.x >= end_screen) {
+		if (this.gameObject.transform.lossyScale.x >= end_screen || Coll.die) {
 			
 			bird.SetActive(false);
 			
@@ -64,16 +62,13 @@ public class die : MonoBehaviour {
 			asd = (world.x * -2);
 			double sdf = asd * 4;
 
-
-			text_score.GetComponent<Text> ().fontSize = (int) sdf;
-			scoretx.GetComponent<Text> ().fontSize = (int) sdf;
-			text_score.GetComponent<Text>().text=""+PlayerPrefs.GetInt ("YourScore");
-
 			ui.SetActive(true);
 			Game_over.SetActive(true);
 			bt_pause.SetActive(false);
 			bt_resume.SetActive(false);
 			tint.SetActive(true);
+            Debug.Log("ui true");
+            Coll.die = false;
 			
 		}
 	}

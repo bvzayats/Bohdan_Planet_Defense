@@ -25,7 +25,9 @@ public class DestroyByClick : MonoBehaviour {
 						{valuescore=2; ManagerScore.score+=valuescore;}
 						if(hit.collider.gameObject.name == "ast4(Clone)"||hit.collider.gameObject.name == "ast5(Clone)"||hit.collider.gameObject.name == "ast6(Clone)"||hit.collider.gameObject.name== "ast13(Clone)"
 						   ||hit.collider.gameObject.name == "ast14(Clone)"||hit.collider.gameObject.name == "ast17(Clone)"||hit.collider.gameObject.name == "ast18(Clone)"){valuescore=3; ManagerScore.score+=valuescore;}
-				}
+                        if (hit.collider.gameObject.name == "Kometa(Clone)") { foreach (GameObject ast in GameObject.FindGameObjectsWithTag("Asteroid")) { Destroy(ast); } }
+                }
+
 			}
 			} 
 		}
